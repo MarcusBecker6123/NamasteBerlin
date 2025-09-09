@@ -6,16 +6,26 @@
 }
 
 body {
+    position: relative;
 font-family: sans-serif;
     margin: 0;
     padding: 0;
+    
 }
 
-#background-logo {
+/*Background image mit before, 
+damit opacity gesteuert werden kann*/
+body::before {
     position: absolute;
-    
-    bottom: 0;
+    content: "";
+    inset: 0;
     width: 100%;
+    background-image: url('Daco_4748257.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-color: #ff00ff22;
     z-index: -1;
     opacity: .4;
 }
@@ -53,7 +63,7 @@ nav h1::before {
 nav h1 {
     position: absolute;
     left: 3rem;
-    top: 1rem;
+    top: -2rem;
 }
 
 
@@ -94,11 +104,76 @@ span {
     
 }
 
+aside {
+    position: relative;
+    background: #ffffff99;
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 60vw;
+    text-align: justify;
+    padding: 3rem;
+    font-weight: 200;
+    border-radius: 20px;
+    z-index: -1;
+  
+}
+
+table {
+    max-width: 90%;
+    border: 1px solid #e3499433;
+    border-collapse: collapse;
+}
+
+tr {
+
+    border-bottom: 1px solid #e3499433;
+}
+
+td {
+    font-size: .875rem;
+    padding: 1rem;
+    margin: 0;
+}
+
+tr:nth-child(odd) > td:nth-child(even) {
+    background-color: #e3499433;
+}
+tr:nth-child(even) > td:nth-child(odd) {
+    background-color: #e3499433;
+}
+
+tr {
+    background-color: #e3499433;
+}
+
+th:nth-child(odd) {
+    background-color: #e3499433;
+}
+
+
+/* tr:nth-child(even) {
+    background-color: #e3499433;
+} */
+
+aside::before {
+    position: absolute;
+    content: "";
+    inset: 5px;
+    box-shadow: 5px 5px 20px #e3499433;
+    filter: blur(5px);
+}
+
 .flex:not(span) {
     padding: 3rem 2rem 3rem 2rem;
     margin: 3rem 0;
     letter-spacing: 1px;
     text-align: justify;
+}
+
+input {
+    display: block;
+    margin: 1rem;
 }
 
 @media (max-width: 480px) {
@@ -113,6 +188,11 @@ span {
         scale: 1.5;  
     }
 
+    section:nth-child(2) {
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    }
     h1:not(::before) {
         position: absolute;
         height: 1rem;
