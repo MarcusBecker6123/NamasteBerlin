@@ -11,6 +11,7 @@ font-family: sans-serif;
     margin: 0;
     padding: 0;
     
+    
 }
 
 /*Background image mit before, 
@@ -50,7 +51,9 @@ header {
     z-index: -2;
 }
 
-
+main {
+    margin-left: 2rem;
+}
 nav h1::before {
     content: url('namaste.svg');
     display: inline-flex;
@@ -110,13 +113,31 @@ aside {
     width: auto;
     height: auto;
     max-height: 100%;
-    max-width: 60vw;
+    max-width: 70vw;
     text-align: justify;
     padding: 3rem;
     font-weight: 200;
     border-radius: 20px;
     z-index: -1;
+    
   
+}
+ .layer1::after, .layer2::after {
+    content: "";
+    background: linear-gradient(150deg, hsla(141, 54%, 86%, .6) 0%, hsla(333, 73%, 85%, .6) 50%, hsla(211, 58%, 79%, .6) );
+    position: absolute;
+    inset: 10%;
+    top: -10%;
+    left: -10%;
+    z-index: -1;
+    border-radius: 30px;
+}
+
+.layer2::after {
+    top: -40%;
+    left: -5%;
+    margin-bottom: 10px;
+    
 }
 
 table {
@@ -156,6 +177,8 @@ th:nth-child(odd) {
     background-color: #e3499433;
 } */
 
+
+/*Glasmorphism effekt*/
 aside::before {
     position: absolute;
     content: "";
@@ -174,6 +197,10 @@ aside::before {
 input {
     display: block;
     margin: 1rem;
+}
+
+footer {
+    margin-top: 2rem;
 }
 
 @media (max-width: 480px) {
@@ -207,5 +234,6 @@ input {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0 auto;
     }
 }
