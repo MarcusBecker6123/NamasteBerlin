@@ -194,6 +194,13 @@ aside::before {
     text-align: justify;
 }
 
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 input {
     display: block;
     margin: 1rem;
@@ -220,13 +227,30 @@ footer {
     margin-top: 2rem;
 
     }
-    h1:not(::before) {
+    .header {
         position: absolute;
         height: 1rem;
-        margin: 2rem;
+        margin: 0 auto;
+        top: 50px;
         
-        left: 50%;
-        translate: -30%;
+       
+    }
+
+    h1::before {
+        position: absolute;
+        top: -28px;
+    }
+
+    .flex-wrap {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .flex-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 600px;
     }
 
     main {
