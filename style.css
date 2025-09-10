@@ -242,16 +242,16 @@ footer {
     }
 
     .flex-wrap {
+        display: flex;
         width: 100%;
+        flex-wrap: wrap;
         overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        overflow-y: hidden;
+        overscroll-behavior: contain;
+        scroll-behavior: smooth;
     }
 
-    .flex-wrap table {
-        width: 100%;
-        border-collapse: collapse;
-        min-width: 600px;
-    }
+    
 
     main {
         display: flex;
